@@ -223,7 +223,6 @@ class Dropbox.Client
           return
 
     _fsmStep()  # Start up the state machine.
-    @
 
   # Checks if this client can perform API calls on behalf of a user.
   #
