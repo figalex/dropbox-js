@@ -128,7 +128,8 @@ class Dropbox.Client
             'OAuth driver auto-configuration failed. Call authDriver.')
 
     if @authStep is DbxClient.ERROR
-      throw new Error 'Client got in an error state. Call reset() to reuse it!'
+      callback new Error('Client got in an error state. Call reset() to reuse it!'), @ if callback
+      return
 
 
     # _fsmStep helper that transitions the FSM to the next step.
